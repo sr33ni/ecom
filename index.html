@@ -143,16 +143,18 @@
   <body class="bg-surface text-on-surface">
     <div class="custom-cursor" id="cursor"></div>
     <!-- TopNavBar Navigation Shell -->
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-      <div
-        class="flex items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg"
-      >
-        <!-- Logo (optional - can remove if you want exact design) -->
+    <nav class="fixed top-6 flex w-full justify-between px-4 z-50">
+      <div class="flex items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg">
         <div
           class="px-4 font-bold text-sm tracking-tight text-stone-900 dark:text-stone-50"
         >
           KINETIC
         </div>
+      </div>
+      <div
+        class="hidden md:flex items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg"
+      >
+
 
         <!-- Nav Links -->
         <a
@@ -195,7 +197,22 @@
           </span>
         </a>
       </div>
+      <!-- Hamburger Button -->
+      <button id="hamburger-btn" class="hamburger text-stone-900 dark:text-stone-50 flex md:hidden items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="mobile-menu bg-stone-200/80 dark:bg-stone-900/80 text-stone-900 dark:text-stone-50">
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">Home</a>
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">About us</a>
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">FAQs</a>
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">Insights</a>
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">Store</a>
+    </div>
     <!-- Hero Section -->
     <section
       class="h-screen w-full relative flex items-center justify-center overflow-hidden bg-surface-container"

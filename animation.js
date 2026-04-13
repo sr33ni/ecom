@@ -145,3 +145,31 @@ if (isTouch) {
 //     text.classList.remove("slide-up");
 //   });       
 // });
+
+// Hamburger Menu Toggle
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (hamburgerBtn && mobileMenu) {
+  hamburgerBtn.addEventListener("click", () => {
+    hamburgerBtn.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+  });
+
+  // Close menu when a link is clicked
+  const menuLinks = mobileMenu.querySelectorAll("a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburgerBtn.classList.remove("active");
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      hamburgerBtn.classList.remove("active");
+      mobileMenu.classList.remove("active");
+    }
+  });
+}

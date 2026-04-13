@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="style.css" />
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -113,11 +114,21 @@
 <span class="material-symbols-outlined text-stone-700 dark:text-stone-300">shopping_bag</span>
 <span class="absolute -top-1 -right-1 bg-secondary text-[8px] text-on-secondary px-1.5 py-0.5 rounded-full">2</span>
 </button>
-<button class="md:hidden">
-<span class="material-symbols-outlined">menu</span>
+<button id="hamburger-btn" class="hamburger text-stone-900 dark:text-stone-50">
+<span></span>
+<span></span>
+<span></span>
 </button>
 </div>
 </nav>
+
+<!-- Mobile Menu Panel -->
+<div id="mobile-menu" class="mobile-menu bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-50">
+<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Experience</a>
+<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Shop</a>
+<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Gallery</a>
+<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Archive</a>
+</div>
 <main class="pt-32 px-6 md:px-[10%] min-h-screen">
 <!-- Hero Branding Section -->
 <header class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
@@ -306,4 +317,5 @@
 </footer>
 <!-- Custom Cursor (Visual only) -->
 <div class="fixed top-0 left-0 w-2 h-2 bg-primary rounded-full pointer-events-none z-[9999] hidden lg:block" id="cursor"></div>
+<script src="animation.js"></script>
 </body></html>

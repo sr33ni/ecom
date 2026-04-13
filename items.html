@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;700;800;900&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#f4f4ef",
+                    "outline-variant": "#b2b2b1",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary-fixed-variant": "#656763",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#695b02",
+                    "secondary-fixed": "#f7e382",
+                    "tertiary-fixed-dim": "#e5e6e1",
+                    "tertiary-container": "#f4f4ef",
+                    "on-error-container": "#752121",
+                    "surface-container": "#f0eded",
+                    "primary-container": "#e5e2e1",
+                    "on-secondary-container": "#5e5200",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "surface-container-high": "#eae8e7",
+                    "secondary-fixed-dim": "#e8d576",
+                    "surface-container-low": "#f6f3f2",
+                    "inverse-primary": "#ffffff",
+                    "error-container": "#fe8983",
+                    "surface-dim": "#dbdad9",
+                    "tertiary-dim": "#525450",
+                    "inverse-surface": "#0e0e0e",
+                    "on-tertiary-container": "#5b5c59",
+                    "secondary": "#6d5f07",
+                    "outline": "#7b7b7a",
+                    "on-tertiary-fixed": "#484a47",
+                    "on-error": "#fff7f6",
+                    "primary": "#5f5e5e",
+                    "on-primary": "#faf7f6",
+                    "background": "#fcf9f8",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-surface-variant": "#5f5f5f",
+                    "on-surface": "#323233",
+                    "on-secondary": "#fff8ea",
+                    "on-primary-container": "#525151",
+                    "error": "#9f403d",
+                    "on-primary-fixed": "#403f3f",
+                    "error-dim": "#4e0309",
+                    "on-tertiary": "#f9f9f4",
+                    "inverse-on-surface": "#9e9c9c",
+                    "secondary-dim": "#605300",
+                    "tertiary": "#5e605c",
+                    "on-background": "#323233",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "surface-variant": "#e4e2e2",
+                    "surface": "#fcf9f8",
+                    "primary-dim": "#535252",
+                    "on-secondary-fixed": "#493f00",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-container": "#f7e382"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ease-in-out-expo { transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1); }
+        .magnetic-hit-area { position: relative; }
+        .tonal-shift-on-scroll { transition: background 0.3s ease; }
+        .stagger-item { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl flex justify-between items-center px-10 py-6 w-full max-w-full">
+<div class="font-['Epilogue'] font-bold text-2xl tracking-tighter text-stone-900 dark:text-stone-50 cursor-pointer">KINETIC</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase transition-all duration-600 ease-in-out-expo hover:opacity-70 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50" href="#">Experience</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase transition-all duration-600 ease-in-out-expo text-stone-900 dark:text-stone-50 border-b-2 border-stone-900 dark:border-stone-50 pb-1" href="#">Shop</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase transition-all duration-600 ease-in-out-expo hover:opacity-70 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50" href="#">Gallery</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase transition-all duration-600 ease-in-out-expo hover:opacity-70 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50" href="#">Archive</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center border-b border-outline-variant/30 pb-1">
+<span class="material-symbols-outlined text-sm opacity-50">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-[10px] tracking-widest font-label uppercase w-32 placeholder:text-outline-variant" placeholder="SEARCH" type="text"/>
+</div>
+<button class="relative group transition-all duration-600 ease-in-out-expo hover:opacity-70">
+<span class="material-symbols-outlined text-stone-700 dark:text-stone-300">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-[8px] text-on-secondary px-1.5 py-0.5 rounded-full">2</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 px-6 md:px-[10%] min-h-screen">
+<!-- Hero Branding Section -->
+<header class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-secondary font-bold mb-4 block stagger-item" style="animation-delay: 100ms;">Seasonal Drop 04 // Kinetic Editorial</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none stagger-item" style="animation-delay: 200ms;">THE HIGH<br/>VELOCITY.</h1>
+</div>
+<div class="stagger-item text-right" style="animation-delay: 300ms;">
+<p class="font-body text-sm text-on-surface-variant max-w-xs ml-auto">
+                    Engineered for motion. Aesthetic precision meets high-performance architecture.
+                </p>
+</div>
+</header>
+<!-- Filters & Sort -->
+<section class="mb-12 border-b border-outline-variant/10 pb-8 flex flex-wrap items-center justify-between gap-6 stagger-item" style="animation-delay: 400ms;">
+<div class="flex flex-wrap gap-8">
+<button class="font-label text-[10px] tracking-widest uppercase border-b-2 border-primary pb-1 font-bold">All Performance</button>
+<button class="font-label text-[10px] tracking-widest uppercase text-outline hover:text-on-surface transition-colors">Outerwear</button>
+<button class="font-label text-[10px] tracking-widest uppercase text-outline hover:text-on-surface transition-colors">Footwear</button>
+<button class="font-label text-[10px] tracking-widest uppercase text-outline hover:text-on-surface transition-colors">Archive Pieces</button>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label text-[10px] tracking-widest text-outline uppercase">Sort by:</span>
+<button class="flex items-center gap-2 group">
+<span class="font-label text-[10px] tracking-widest uppercase font-bold">Featured First</span>
+<span class="material-symbols-outlined text-xs group-hover:translate-y-0.5 transition-transform">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Product Grid: Asymmetric & Staggered -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-40">
+<!-- Product Card 1: Hero Large -->
+<div class="md:col-span-7 group stagger-item" style="animation-delay: 500ms;">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a vibrant red high-performance running shoe with sharp architectural design details against a neutral grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9hk1lypjEa8jLMCrX01yODpU5jFvQaBvl0jVVsiJ-N5Jibouy5kgRZ_Ll4mBB4QyyVcdOAK335iVO07pJP_74HiwzRdGHW-EFCXk0vRhJ5ciuZr3YSuB5nlnrVsQ49uYSt21DskLfWLUL7dZKOWS6qiASn7OW8pNW7Miyye5T4sNu8cjP_LJ6n0eq5uCfm7KDqQr4jCrBCFXVtWy0HTSMOiA8i8lvX99d0rhx-m3_bytDU1dQ5-q5oolUy40tmFnFknL6yJNw_SY"/>
+<!-- Quick Add Overlay -->
+<div class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out-expo flex gap-2">
+<button class="flex-1 bg-primary text-on-primary py-4 font-label text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-colors">
+                            Add to Bag
+                        </button>
+<button class="bg-surface-container-lowest text-on-surface w-14 flex items-center justify-center hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold uppercase tracking-tight">Vortex-8 Engineered Runner</h3>
+<p class="font-label text-[10px] tracking-widest text-outline uppercase mt-1">High Intensity Training / Carbon Chassis</p>
+</div>
+<span class="font-headline text-xl font-light">$240.00</span>
+</div>
+</div>
+<!-- Product Card 2: Small Offset -->
+<div class="md:col-span-5 md:mt-32 group stagger-item" style="animation-delay: 600ms;">
+<div class="relative overflow-hidden aspect-[3/4] bg-surface-container mb-6">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist streetwear ensemble with white sneakers and cream tech-wear pants displayed in a clean architectural studio space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB78fX4WkRIoEnGmrLk5XfgnEyqSyhTQ-8JJ-bOEDuQs_xUDjMMwV_RKjMsW3V-P1I3YkrBzODs66DmXQ3WNhtsxhWHbKso1bkdNRqBRMz8eS1R0xBZZjVnMkSmdoVmW9oHPtVMwxcYV4ziRBPDrjyCxH_STLZtvVRyjhBGqOc3dDQm6CRdqB15y-D5ylVFcP3CauGLtEAWTg25hHdj5ylAyceiysYJwCHuzdc15ykxpnAUl3yRmaxTQNzyh9Gn6IgFEV3OTlH6O7k"/>
+<div class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out-expo">
+<button class="w-full bg-primary text-on-primary py-4 font-label text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-colors">
+                            Quick Add
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl font-bold uppercase tracking-tight">Kinetic Shell 01</h3>
+<p class="font-label text-[10px] tracking-widest text-outline uppercase mt-1">Waterproof / 3-Layer GORE-TEX</p>
+</div>
+<span class="font-headline text-lg font-light">$415.00</span>
+</div>
+</div>
+<!-- Product Card 3: Wide Layout -->
+<div class="md:col-span-12 group stagger-item" style="animation-delay: 700ms;">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative overflow-hidden aspect-square md:aspect-video bg-surface-container">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Wide shot of several limited edition sneakers arranged in a geometric pattern on a white platform with soft cinematic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOB76PXRNm96UR3rTObx5na_1uBS84DkAp5WFfOFekbVcSBZyfut21njd4aWuxHu5ZuvnUogrGWKY5uWF2C3vzf2a5HRUrUMS09CdWJSRxUlD8ecFfaFk-elJbYiFpbP5MKit5193bPWEsikWA68q6SCLk_LFEWZc5550Dzh6REXkFgICQLEJqHbyci8h-DrLY8eTcTQP3L8SAapnxXs6P4fbI-fNsjB6i8RM0euQ01EqBtAcbG-3php7itIffCi_Wz8OMshqXNps"/>
+<div class="absolute top-6 left-6 bg-inverse-surface text-inverse-primary px-3 py-1 font-label text-[9px] tracking-widest uppercase">Limited Edition</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label text-[10px] tracking-widest uppercase text-secondary font-bold mb-4">New Release</span>
+<h3 class="font-headline text-4xl font-black uppercase tracking-tighter mb-4 leading-none">The Archive<br/>Series: Volt</h3>
+<p class="font-body text-sm text-on-surface-variant max-w-sm mb-8">
+                            A reimagining of the 1998 classic. Infused with modern kinetic energy return systems and recycled ocean plastics.
+                        </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 font-label text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-colors">Shop Collection</button>
+<button class="border border-outline-variant px-10 py-4 font-label text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-surface-container transition-colors">Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4: Small -->
+<div class="md:col-span-4 group stagger-item" style="animation-delay: 800ms;">
+<div class="relative overflow-hidden aspect-square bg-surface-container mb-6">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Macro view of a neon green sneaker sole featuring advanced tread patterns and translucent air cushioning elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBnBxgWIMoel7H3WizfcBaGzxnwBONK9MFH6MYyZ-uk7xNsmlcBQPVClHEi1mcDQRhaJ2ALDNd7yl2m7-pgt4vu7O5vRgS4MSDe5Ih_1Sh7XNsNnDIRHc5L9YvjYJgzl5FDX3X0Vnam8tMiwouacYcWcI3TjGpzTN11jLkijoGZHk55_EOStPuHoemeU7hjlQ4anPuiwRSmPPq_GeGFSWQfx7Lm71LoujID3DYDopa9q9OBurZkzGPAjeGctXeheaamdyR6tJM-U"/>
+<div class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out-expo flex gap-2">
+<button class="flex-1 bg-primary text-on-primary py-4 font-label text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-colors">Add to Bag</button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-lg font-bold uppercase tracking-tight">Ignite Mesh Vest</h3>
+<p class="font-label text-[10px] tracking-widest text-outline uppercase mt-1">Reflective / Breathable</p>
+</div>
+<span class="font-headline text-lg font-light">$85.00</span>
+</div>
+</div>
+<!-- Product Card 5: Small -->
+<div class="md:col-span-4 group stagger-item" style="animation-delay: 900ms;">
+<div class="relative overflow-hidden aspect-square bg-surface-container mb-6">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist black sports bra with sleek racerback design and subtle logo detailing against a high-contrast industrial background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVeFDwamCKKhqgzort7mJwTzTj4bOuq_0WdRcf9w3gPRj-lWU4Q3va7APZ7f4a2spLvT5XVnToYb5Kblie7zze2CU-wC9G7KE1EwyjZPXlxa0GWKKSatcUC79MnT-T-iDHRLMY3BMI70Ndt5kimD20G6QCjpi7z3XBzj2L3Xtu0Ec7wcIP5qTqhq6e0NckFhYOX00a2DgpAZQXLXlhRfvzIBZQqYAu1cWZqAmPOo0AAVEsUlESMwJUSc2EDuBimAOVmf4d3K_FCkI"/>
+<div class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out-expo flex gap-2">
+<button class="flex-1 bg-primary text-on-primary py-4 font-label text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-colors">Add to Bag</button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-lg font-bold uppercase tracking-tight">Velocity Crop Top</h3>
+<p class="font-label text-[10px] tracking-widest text-outline uppercase mt-1">Seamless / Performance</p>
+</div>
+<span class="font-headline text-lg font-light">$65.00</span>
+</div>
+</div>
+<!-- Product Card 6: Small Offset Up -->
+<div class="md:col-span-4 group stagger-item -mt-20 md:mt-0" style="animation-delay: 1000ms;">
+<div class="relative overflow-hidden aspect-square bg-surface-container mb-6">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pair of stylish urban utility shorts in olive green with multiple cargo pockets and tactical straps on a textured concrete surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaJJhOu1NKKA4_WwMEKk7-jR2T987lVMnZUmpTOQ4oDq7bxPbNOrbIrvVIwbZwGQqVIUNsHZ27sPQyjQiuO3o-DrCZo9uD50kfc9v3DtBCM0vtoGRSRSOXFpZu1YaJ5R6O3rjQ1Z1MlLisaNI6P-wz7mPNNsDkNsaxNQW_B9v2-YBz9LGT7hwq6XIQuUdFG76xoItgHniLTV8I8IBmBtDo58yo43N2i_twEQDe4Cy4ToBU3knKuaKh9RXHmVBvGH01sDIc7VjQGaU"/>
+<div class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out-expo flex gap-2">
+<button class="flex-1 bg-primary text-on-primary py-4 font-label text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-colors">Add to Bag</button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-lg font-bold uppercase tracking-tight">Cargo Utility Short</h3>
+<p class="font-label text-[10px] tracking-widest text-outline uppercase mt-1">Modular / Ripstop</p>
+</div>
+<span class="font-headline text-lg font-light">$120.00</span>
+</div>
+</div>
+</section>
+<!-- Loading / Infinite Scroll Indicator -->
+<section class="flex flex-col items-center justify-center py-20 border-t border-outline-variant/10">
+<div class="w-12 h-12 border-2 border-primary border-t-transparent animate-spin mb-6"></div>
+<p class="font-label text-[10px] tracking-[0.5em] uppercase text-outline">Loading More Artifacts</p>
+</section>
+</main>
+<!-- Side Navigation Shell (Hidden on mobile) -->
+<aside class="hidden md:flex h-screen w-20 fixed left-0 top-0 z-[60] bg-stone-100 dark:bg-stone-900 flex-col items-center justify-between py-12 shadow-2xl dark:shadow-none">
+<div class="font-black text-xl text-stone-900 dark:text-stone-50">K</div>
+<div class="flex flex-col gap-10">
+<a href="index.html" class="group transition-transform duration-500 hover:scale-125 text-stone-400 dark:text-stone-600 hover:text-stone-900 dark:hover:text-stone-50" title="Experience">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a href="items.html" class="group transition-transform duration-500 scale-110 text-stone-900 dark:text-stone-50 font-bold" title="Shop">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</a>
+<a href="#gallery" class="group transition-transform duration-500 hover:scale-125 text-stone-400 dark:text-stone-600 hover:text-stone-900 dark:hover:text-stone-50" title="Gallery">
+<span class="material-symbols-outlined">auto_stories</span>
+</a>
+<a href="#profile" class="group transition-transform duration-500 hover:scale-125 text-stone-400 dark:text-stone-600 hover:text-stone-900 dark:hover:text-stone-50" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+</div>
+<a href="#exclusive" class="rotate-90 origin-center whitespace-nowrap font-['Epilogue'] font-light uppercase tracking-[0.2em] text-xs text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors">
+            EXCLUSIVE DROP
+        </a>
+</aside>
+<!-- Footer Shell -->
+<footer class="w-full mt-40 bg-stone-100 dark:bg-stone-900 flex flex-col items-center gap-8 py-20 px-10">
+<div class="font-['Epilogue'] font-bold text-lg text-stone-900 dark:text-stone-50">KINETIC</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="font-['Manrope'] text-xs tracking-widest uppercase opacity-50 hover:opacity-100 transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-['Manrope'] text-xs tracking-widest uppercase opacity-50 hover:opacity-100 transition-opacity duration-300" href="#">Terms</a>
+<a class="font-['Manrope'] text-xs tracking-widest uppercase opacity-50 hover:opacity-100 transition-opacity duration-300" href="#">Contact</a>
+<a class="font-['Manrope'] text-xs tracking-widest uppercase opacity-50 hover:opacity-100 transition-opacity duration-300" href="#">Sustainability</a>
+</div>
+<div class="w-full max-w-lg h-px bg-outline-variant/20 my-4"></div>
+<p class="font-['Manrope'] text-[10px] tracking-widest uppercase text-center opacity-40">
+            © 2024 KINETIC EDITORIAL. ALL RIGHTS RESERVED.
+        </p>
+<div class="flex gap-6 mt-4">
+<span class="material-symbols-outlined text-stone-400">public</span>
+<span class="material-symbols-outlined text-stone-400">diversity_3</span>
+<span class="material-symbols-outlined text-stone-400">eco</span>
+</div>
+</footer>
+<!-- Custom Cursor (Visual only) -->
+<div class="fixed top-0 left-0 w-2 h-2 bg-primary rounded-full pointer-events-none z-[9999] hidden lg:block" id="cursor"></div>
+</body></html>

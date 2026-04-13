@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;700;900&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#f4f4ef",
+                    "outline-variant": "#b2b2b1",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary-fixed-variant": "#656763",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#695b02",
+                    "secondary-fixed": "#f7e382",
+                    "tertiary-fixed-dim": "#e5e6e1",
+                    "tertiary-container": "#f4f4ef",
+                    "on-error-container": "#752121",
+                    "surface-container": "#f0eded",
+                    "primary-container": "#e5e2e1",
+                    "on-secondary-container": "#5e5200",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "surface-container-high": "#eae8e7",
+                    "secondary-fixed-dim": "#e8d576",
+                    "surface-container-low": "#f6f3f2",
+                    "inverse-primary": "#ffffff",
+                    "error-container": "#fe8983",
+                    "surface-dim": "#dbdad9",
+                    "tertiary-dim": "#525450",
+                    "inverse-surface": "#0e0e0e",
+                    "on-tertiary-container": "#5b5c59",
+                    "secondary": "#6d5f07",
+                    "outline": "#7b7b7a",
+                    "on-tertiary-fixed": "#484a47",
+                    "on-error": "#fff7f6",
+                    "primary": "#5f5e5e",
+                    "on-primary": "#faf7f6",
+                    "background": "#fcf9f8",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-surface-variant": "#5f5f5f",
+                    "on-surface": "#323233",
+                    "on-secondary": "#fff8ea",
+                    "on-primary-container": "#525151",
+                    "error": "#9f403d",
+                    "on-primary-fixed": "#403f3f",
+                    "error-dim": "#4e0309",
+                    "on-tertiary": "#f9f9f4",
+                    "inverse-on-surface": "#9e9c9c",
+                    "secondary-dim": "#605300",
+                    "tertiary": "#5e605c",
+                    "on-background": "#323233",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "surface-variant": "#e4e2e2",
+                    "surface": "#fcf9f8",
+                    "primary-dim": "#535252",
+                    "on-secondary-fixed": "#493f00",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-container": "#f7e382"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ease-in-out-expo { transition-timing-function: cubic-bezier(1, 0, 0, 1); }
+        .magnetic-hit-area { position: relative; }
+        .tonal-shift-on-scroll { transition: background-color 0.3s ease; }
+        ::-webkit-scrollbar { width: 0px; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl flex justify-between items-center px-10 py-6 w-full max-w-full">
+<div class="font-['Epilogue'] font-bold text-2xl tracking-tighter text-stone-900 dark:text-stone-50 transition-all duration-600 ease-in-out-expo hover:opacity-70 cursor-pointer">KINETIC</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-600 ease-in-out-expo" href="#">Experience</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-900 dark:text-stone-50 border-b-2 border-stone-900 dark:border-stone-50 pb-1 transition-all duration-600 ease-in-out-expo" href="#">Shop</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-600 ease-in-out-expo" href="#">Gallery</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-600 ease-in-out-expo" href="#">Archive</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-stone-700 dark:text-stone-300 transition-all duration-600 ease-in-out-expo hover:opacity-70">search</button>
+<button class="relative material-symbols-outlined text-stone-700 dark:text-stone-300 transition-all duration-600 ease-in-out-expo hover:opacity-70">
+                shopping_bag
+                <span class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
+</button>
+</div>
+</nav>
+<!-- Sidebar Shell (Hidden on Mobile) -->
+<aside class="h-screen w-20 fixed left-0 top-0 z-[60] bg-stone-50 dark:bg-stone-950 flex flex-col items-center justify-between py-12 hidden lg:flex">
+<div class="flex flex-col items-center gap-2">
+<div class="font-black text-xl text-stone-800 dark:text-stone-200">K</div>
+<div class="w-px h-12 bg-outline-variant/30 mt-4"></div>
+</div>
+<div class="flex flex-col gap-10">
+<a href="index.html" class="material-symbols-outlined text-stone-400 dark:text-stone-600 hover:scale-125 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-500 cursor-pointer" title="Experience">home</a>
+<a href="items.html" class="material-symbols-outlined text-stone-900 dark:text-stone-50 font-bold scale-110 cursor-pointer" title="Shop" style="font-variation-settings: 'FILL' 1;">storefront</a>
+<a href="#gallery" class="material-symbols-outlined text-stone-400 dark:text-stone-600 hover:scale-125 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-500 cursor-pointer" title="Gallery">auto_stories</a>
+<a href="#profile" class="material-symbols-outlined text-stone-400 dark:text-stone-600 hover:scale-125 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-500 cursor-pointer" title="Profile">person</a>
+</div>
+<a href="#exclusive" class="rotate-90 origin-center whitespace-nowrap font-['Epilogue'] font-light uppercase tracking-[0.2em] text-xs text-stone-800 dark:text-stone-200 hover:text-stone-900 dark:hover:text-stone-50 transition-colors">
+Exclusive Drop
+</a>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-32 px-6 lg:ml-20 lg:px-24">
+<!-- Hero Section -->
+<header class="mb-32">
+<h1 class="font-headline font-black text-6xl md:text-8xl tracking-tighter uppercase mb-8 leading-[0.85]">
+                Kinetic<br/><span class="text-outline-variant/40">Editorial</span>
+</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-xl">A curated selection of technical performance and editorial aesthetics. Engineered for movement, designed for the gallery.</p>
+</header>
+<!-- Product Grid (Asymmetric) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8 items-start">
+<!-- Product 1 -->
+<div class="md:col-span-7 group">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Premium technical sneakers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high-fashion technical sneakers in a studio setting with sharp shadows and minimalist concrete background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmNbwnuySBwAW4AUeyKLa_19i9I2DojKMxKH_CuhEFZwrh3AaStHJJkIN9TDD9veoTobauu2JsIyF34ui_QquRDXfnme4KrmiCaxn8EdqVsSFriZJtkkeC34cbfhF9KjRFHpQdVtuZsMcrAQXmRFDTC4-gi_Tf9r28QSwt7g1K8lgbXj2GZaxC8aHrAWJwj4jzFsOULtBX7wsrFaK4zk-qonlHV56PBYXbl4-c8Ms5s1yilrKhOGQvzqxgFff3z5HazjpsI2hLELc"/>
+<div class="absolute bottom-8 left-8">
+<span class="font-label text-[10px] uppercase tracking-widest bg-on-surface text-surface px-3 py-1">Limited Release</span>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-2xl uppercase tracking-tight">Vortex Runner Alpha</h3>
+<p class="font-body text-sm text-on-surface-variant">Technical Mesh / Carbon Fiber Sole</p>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-xl">$420.00</span>
+<button class="block mt-4 bg-primary text-on-primary px-8 py-3 font-label text-xs uppercase tracking-widest transition-all hover:bg-secondary hover:translate-y-[-2px] active:translate-y-[0px]">Add to Bag</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="md:col-span-4 md:mt-40 group">
+<div class="relative overflow-hidden aspect-[3/4] bg-surface-container-low">
+<img alt="Editorial fashion piece" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="editorial fashion model wearing oversized technical jacket in a minimal architectural space with soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5TUdwgNEuPCVUcsAjih1aNyehivAKQmi1EcB0H9IVa_DtR3JT60tDCSbRYoI4NObnGBLzU4Oj4qghf2NDNwhgtnBpF7O8P81-CE71TBD0FYI7xbV0SAgtxFeodDvWd9KupIswo218zwnuwXb3t3IXvJEtczZtYdPd-297ZpWsgNQqJQdeZWogBXlJlP7lAJsZsFbsBoxN3qghL1qYIuOzaJpOiJjlm7Zd7qlttdPAhJHD9_Xj1oIJCwTPtiTGnU3pQcfCPScrPXA"/>
+</div>
+<div class="mt-8">
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight">Structure Shell 01</h3>
+<p class="font-body text-sm text-on-surface-variant mb-4">Gore-Tex Infinite / Obsidian Black</p>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-lg">$680.00</span>
+<button class="material-symbols-outlined text-primary p-2 border border-outline-variant/20 hover:bg-surface-container transition-colors">add_shopping_cart</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="md:col-span-5 md:-mt-20 group">
+<div class="relative overflow-hidden aspect-square bg-surface-container-low">
+<img alt="Minimalist accessory" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="minimalist black ceramic water bottle on a white marble surface with sharp modern architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUgw4wTsyHJ6zQ1V48SP7zagLR8sl5xUxrXKMzDAJkxN72Pt9aQ5IQRUduGMTOe4aoilqlNGePxcH6FtSLWu_1yIjrBNXQ5elklAMpKeBjEF0dZgzLQ3rRufB13dmQHuf72FeSIaSj-zT8qPtCmoQ5RpRaHMqUHpHEGvw_xC0CLuyBwulSCmDiEPoIIIDeOEVkx3sUSf_On2Y-WMVD-bYow3O-jIcOlqVc5a_T2VknSaQULC_rGX7FGcj5Okk0prxa7oPwHE2Qh90"/>
+</div>
+<div class="mt-8">
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight">Element Vessel</h3>
+<p class="font-body text-sm text-on-surface-variant mb-4">Matte Ceramic / 500ml</p>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-lg">$85.00</span>
+<button class="text-primary font-label text-[10px] uppercase tracking-[0.2em] border-b border-primary pb-1 hover:opacity-50 transition-opacity">Quick Add</button>
+</div>
+</div>
+</div>
+<!-- Aesthetic Break -->
+<div class="md:col-span-6 md:col-start-7 flex flex-col justify-center py-20 px-8 bg-surface-container-low">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-4">The Philosophy</span>
+<blockquote class="font-headline font-light text-3xl italic leading-tight">
+                    "Style is the kinetic energy of the soul made visible."
+                </blockquote>
+</div>
+</section>
+</main>
+<!-- Slide-in Cart Drawer (Overlay) -->
+<div class="fixed inset-0 z-[100] invisible pointer-events-none transition-all duration-500">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+<!-- Drawer Panel -->
+<div class="absolute right-0 top-0 h-full w-full max-w-md bg-surface shadow-2xl flex flex-col transform translate-x-full transition-transform duration-700 ease-in-out-expo pointer-events-auto">
+<div class="p-8 flex justify-between items-center">
+<h2 class="font-headline font-bold text-2xl uppercase tracking-tighter">Your Bag (2)</h2>
+<button class="material-symbols-outlined text-on-surface text-3xl transition-transform hover:rotate-90">close</button>
+</div>
+<!-- Cart Items -->
+<div class="flex-1 overflow-y-auto px-8 py-4 space-y-12">
+<!-- Item 1 -->
+<div class="flex gap-6 items-center">
+<div class="w-24 h-24 bg-surface-container overflow-hidden">
+<img alt="Thumbnail" class="w-full h-full object-cover" data-alt="Close up of high fashion sneaker heel detail with technical textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg4euUw9KDTra0vybdINfjS1fdt_NqYq4KiJ2dqLfG_XHvHEG3eJ92U4myJbH2QIhrOKxr5Aob1RdGj1aOUWzJbAORA9MKuGBwRqLV8cEt2TjItPNaf1EMJRIjjNkCY_ctXvqEbNBcbllPPXIoQf5BQyxREMPpuxZRFLfNcLXTTh7gpaBZG3oqao3pDcgIjTfqhCz0QxMZzy2RgD6YVAj9u_Bie8SCRxTROvPRovyThsjWNttWTzlcWL450G0TYM3tvyyIaARtfO8"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="font-headline font-bold uppercase text-sm">Vortex Runner Alpha</span>
+<span class="font-headline font-bold text-sm">$420.00</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Size: 42 / Obsidian Black</p>
+<div class="flex items-center gap-4 mt-4">
+<button class="w-6 h-6 border border-outline-variant/30 flex items-center justify-center text-xs">-</button>
+<span class="text-xs font-bold">1</span>
+<button class="w-6 h-6 border border-outline-variant/30 flex items-center justify-center text-xs">+</button>
+<button class="text-[10px] uppercase tracking-widest text-error ml-auto">Remove</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 items-center">
+<div class="w-24 h-24 bg-surface-container overflow-hidden">
+<img alt="Thumbnail" class="w-full h-full object-cover" data-alt="Texture detail of a high-tech obsidian black shell jacket fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkmjAtK_HN8udIBcVFru9FFFShySRD-MJPSO-8fbaZYSTv0CHmrmqVqFbIF4ssVAGiG1sx6nXtlPufcJyCWZTg33sJ1eQsxZOMlUIAobiKe_d6dCJQCUcsDeQ5Fw94ZCH4o-T3p7BKoO28l6Cw4uoeGrQehmww-zQ4rWQh59m22EycBmdjBiyjpa4xp-W0a0XShi6_-zIHr3tDUNTLkXW_lqlhny5qk5qgFMDPmY81M89aM5WHsDR9ZGhN146Z6x4N1wGpkrkG79I"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="font-headline font-bold uppercase text-sm">Structure Shell 01</span>
+<span class="font-headline font-bold text-sm">$680.00</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Size: M / Obsidian Black</p>
+<div class="flex items-center gap-4 mt-4">
+<button class="w-6 h-6 border border-outline-variant/30 flex items-center justify-center text-xs">-</button>
+<span class="text-xs font-bold">1</span>
+<button class="w-6 h-6 border border-outline-variant/30 flex items-center justify-center text-xs">+</button>
+<button class="text-[10px] uppercase tracking-widest text-error ml-auto">Remove</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary & Checkout -->
+<div class="bg-surface-container-low p-8 space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between items-center text-xs uppercase tracking-widest text-on-surface-variant">
+<span>Subtotal</span>
+<span>$1,100.00</span>
+</div>
+<div class="flex justify-between items-center text-xs uppercase tracking-widest text-on-surface-variant">
+<span>Shipping</span>
+<span>Calculated at checkout</span>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+<span class="font-headline font-bold text-xl uppercase tracking-tighter">Total</span>
+<span class="font-headline font-bold text-2xl tracking-tight">$1,100.00</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-label text-xs uppercase tracking-[0.3em] font-bold hover:bg-secondary transition-all flex items-center justify-center gap-4 group">
+                    Begin Checkout
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+<div class="text-center">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">Free Express Shipping on Orders over $500</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Shell -->
+<footer class="w-full mt-40 bg-stone-100 dark:bg-stone-900 flex flex-col items-center gap-8 py-20 px-10">
+<div class="font-['Epilogue'] font-bold text-lg text-stone-900 dark:text-stone-50">KINETIC EDITORIAL</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="font-['Manrope'] text-xs tracking-widest uppercase text-stone-900 dark:text-stone-50 opacity-50 hover:opacity-100 transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-['Manrope'] text-xs tracking-widest uppercase text-stone-900 dark:text-stone-50 opacity-50 hover:opacity-100 transition-opacity duration-300 underline underline-offset-4" href="#">Terms</a>
+<a class="font-['Manrope'] text-xs tracking-widest uppercase text-stone-900 dark:text-stone-50 opacity-50 hover:opacity-100 transition-opacity duration-300" href="#">Contact</a>
+<a class="font-['Manrope'] text-xs tracking-widest uppercase text-stone-900 dark:text-stone-50 opacity-50 hover:opacity-100 transition-opacity duration-300" href="#">Sustainability</a>
+</div>
+<div class="w-full max-w-2xl h-px bg-outline-variant/20 my-4"></div>
+<div class="font-['Manrope'] text-xs tracking-widest uppercase text-stone-900 dark:text-stone-50 opacity-50">
+            © 2024 KINETIC EDITORIAL. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+<!-- Bottom Nav Bar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface/80 backdrop-blur-xl flex justify-around items-center py-6 z-[90]">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="home">home</span>
+<span class="material-symbols-outlined text-primary" data-icon="storefront">storefront</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="auto_stories">auto_stories</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+</nav>
+<!-- Triggering Cart (Simulation layer) -->
+<style>
+        /* Open State Simulation (For UI Design preview) */
+        /* To toggle: add .visible and remove translate-x-full from drawer panel */
+    </style>
+</body></html>

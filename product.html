@@ -94,35 +94,76 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
 <!-- Top Navigation Shell -->
-<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl flex justify-between items-center px-10 py-6 w-full max-w-full">
-<div class="font-['Epilogue'] font-bold text-2xl tracking-tighter text-stone-900 dark:text-stone-50 transition-all duration-600 ease-in-out-expo hover:opacity-70 cursor-pointer">KINETIC</div>
-<div class="hidden md:flex items-center gap-12">
-<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-600 ease-in-out-expo" href="#">Experience</a>
-<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-900 dark:text-stone-50 border-b-2 border-stone-900 dark:border-stone-50 pb-1 transition-all duration-600 ease-in-out-expo" href="#">Shop</a>
-<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-600 ease-in-out-expo" href="#">Gallery</a>
-<a class="font-['Epilogue'] tracking-tight text-sm uppercase text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-600 ease-in-out-expo" href="#">Archive</a>
-</div>
-<div class="flex items-center gap-6">
-<button class="material-symbols-outlined text-stone-700 dark:text-stone-300 transition-all duration-600 ease-in-out-expo hover:opacity-70">search</button>
-<button class="relative material-symbols-outlined text-stone-700 dark:text-stone-300 transition-all duration-600 ease-in-out-expo hover:opacity-70">
-                shopping_bag
-                <span class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
-</button>
-<button id="hamburger-btn" class="hamburger text-stone-900 dark:text-stone-50">
-<span></span>
-<span></span>
-<span></span>
-</button>
-</div>
-</nav>
+    <nav class="fixed top-6 flex w-full justify-between px-4 z-50">
+      <div class="flex items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg">
+        <div
+          class="px-4 font-bold text-sm tracking-tight text-stone-900 dark:text-stone-50"
+        >
+          KINETIC
+        </div>
+      </div>
+      <div
+        class="hidden md:flex items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg"
+      >
 
-<!-- Mobile Menu Panel -->
-<div id="mobile-menu" class="mobile-menu bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-50">
-<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Experience</a>
-<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Shop</a>
-<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Gallery</a>
-<a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-200 dark:hover:bg-stone-800">Archive</a>
-</div>
+
+        <!-- Nav Links -->
+        <a
+          href="index.html"
+          class="px-5 py-2 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
+        >
+          Home
+        </a>
+
+        <a
+          href="#"
+          class="px-5 py-2 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
+        >
+          About us
+        </a>
+
+        <a
+          href="#"
+          class="px-5 py-2 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
+        >
+          FAQs
+        </a>
+
+        <!-- Active Tab -->
+        <a
+          href="#"
+          class="px-5 py-2 text-xs font-medium uppercase rounded-full bg-stone-300/50 dark:bg-stone-700 text-black dark:text-white"
+        >
+          Insights
+        </a>
+
+        <!-- CTA Button -->
+        <a
+          href="items.html"
+          class="px-6 py-3 text-xs font-semibold uppercase rounded-full bg-black text-white hover:opacity-80 transition group text-rotate"
+        >
+          <span class="relative overflow-hidden block text-span">
+            <span class="block relative">Store</span>
+            <span class="block absolute">Store</span>
+          </span>
+        </a>
+      </div>
+      <!-- Hamburger Button -->
+      <button id="hamburger-btn" class="hamburger text-stone-900 dark:text-stone-50 flex md:hidden items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="mobile-menu bg-stone-200/80 dark:bg-stone-900/80 text-stone-900 dark:text-stone-50">
+      <a href="index.html" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">Home</a>
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">About us</a>
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">FAQs</a>
+      <a href="#" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">Insights</a>
+      <a href="items.html" class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800">Store</a>
+    </div>
 <!-- Sidebar Shell (Hidden on Mobile) -->
 <aside class="h-screen w-20 fixed left-0 top-0 z-[60] bg-stone-50 dark:bg-stone-950 flex flex-col items-center justify-between py-12 hidden lg:flex">
 <div class="flex flex-col items-center gap-2">

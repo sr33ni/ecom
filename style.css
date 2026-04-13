@@ -1,9 +1,4 @@
-:is(a, button) {
-  cursor: inherit !important;
-}
-#cursor{
-    background-color: #fff;
-}
+
 .text-rotate > .text-span > span{
     transform: translateY(0px);
   transition: transform 0.3s ease;

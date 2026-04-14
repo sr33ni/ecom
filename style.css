@@ -1,10 +1,9 @@
-
-.text-rotate > .text-span > span{
-    transform: translateY(0px);
+.text-rotate > .text-span > span.swap {
+  transform: translateY(0px);
   transition: transform 0.3s ease;
 }
-.text-rotate:hover > .text-span > span {
-  transform: translateY(-15px);
+.text-rotate:hover > .text-span > span.swap {
+  transform: translateY(-13px);
   transition: transform 0.3s ease;
 }
 p {
@@ -97,7 +96,11 @@ p {
   display: block;
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(95, 94, 94, 0.6) 0%, rgba(95, 94, 94, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(95, 94, 94, 0.6) 0%,
+    rgba(95, 94, 94, 0) 70%
+  );
   pointer-events: none;
   transform: scale(0);
   animation: rippleExpand 0.6s ease-out;
@@ -182,7 +185,34 @@ p {
 .dark .mobile-menu a:hover {
   background: rgba(255, 255, 255, 0.05);
 }
-
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 300,
+    "GRAD" 0,
+    "opsz" 24;
+}
+body {
+  cursor: none;
+}
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background: #5f5e5e;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+.magnetic-hover:hover .custom-cursor {
+  transform: scale(5);
+  mix-blend-mode: difference;
+  background: white;
+}
+.ease-out-expo {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
 /* Show hamburger on mobile */
 @media (max-width: 768px) {
   .hamburger {

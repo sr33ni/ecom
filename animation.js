@@ -60,30 +60,6 @@ const isTouch = isTouchDevice();
 
 // Custom cursor for desktop only
 if (!isTouch) {
-  const cursor = document.getElementById("cursor");
-  document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-  });
-
-  const interactables = document.querySelectorAll(
-    "button, a, .group, .material-symbols-outlined",
-  );
-  interactables.forEach((item) => {
-    item.addEventListener("mouseenter", () => {
-      cursor.style.width = "40px";
-      cursor.style.height = "40px";
-      cursor.style.background = "rgba(95, 94, 94, 0.2)";
-      cursor.style.backdropFilter = "blur(1px)";
-    });
-    item.addEventListener("mouseleave", () => {
-      cursor.style.width = "9px";
-      cursor.style.height = "9px";
-      cursor.style.background = "#ffffff";
-      cursor.style.backdropFilter = "none";
-    });
-  });
-
   // Magnetic effect simulation (desktop only)
   const magneticButtons = document.querySelectorAll("button");
   magneticButtons.forEach((btn) => {
@@ -132,44 +108,5 @@ if (isTouch) {
     btn.style.position = "relative";
     btn.style.overflow = "hidden";
     btn.addEventListener("touchstart", createRipple);
-  });
-}
-
-//Rotate text animation
-// const rotateText = document.querySelectorAll(".text-rotate");
-// rotateText.forEach((text) => {
-//   text.addEventListener("mousemove", (e) => {
-//     text.classList.add("slide-up");
-//   });
-//   text.addEventListener("mouseleave", (e) => {
-//     text.classList.remove("slide-up");
-//   });       
-// });
-
-// Hamburger Menu Toggle
-const hamburgerBtn = document.getElementById("hamburger-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-if (hamburgerBtn && mobileMenu) {
-  hamburgerBtn.addEventListener("click", () => {
-    hamburgerBtn.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
-  });
-
-  // Close menu when a link is clicked
-  const menuLinks = mobileMenu.querySelectorAll("a");
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburgerBtn.classList.remove("active");
-      mobileMenu.classList.remove("active");
-    });
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-      hamburgerBtn.classList.remove("active");
-      mobileMenu.classList.remove("active");
-    }
   });
 }

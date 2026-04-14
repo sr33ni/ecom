@@ -160,91 +160,58 @@
         </div>
       </div>
       <div
-        class="hidden md:flex items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg"
+        class="left-[2rem] right-[2rem] fixed bottom-2 justify-between md:static flex items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg"
       >
         <!-- Nav Links -->
         <a
           href="index.html"
-          class="px-5 py-2 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
+          class="inline-flex p-1 md:px-6 md:py-3 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
         >
-          Home
+          <span class="hidden md:block">home</span>
+          <span class="md:hidden material-symbols-outlined leading-none text-4xl">home</span>
         </a>
 
         <a
           href="#"
-          class="px-5 py-2 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
+          class="inline-flex p-1 md:px-6 md:py-3 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
         >
-          About us
+          <span class="hidden md:block">About us</span>
+          <span class="md:hidden material-symbols-outlined leading-none text-4xl"
+            >article</span
+          >
         </a>
 
         <a
           href="#"
-          class="px-5 py-2 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
+          class="inline-flex p-1 md:px-6 md:py-3 text-xs font-medium uppercase rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-300/50 dark:hover:bg-stone-800 transition"
         >
-          FAQs
+          <span class="hidden md:block">FAQs</span>
+          <span class="md:hidden material-symbols-outlined leading-none text-4xl">help</span>
         </a>
 
         <!-- Active Tab -->
         <a
           href="#"
-          class="px-5 py-2 text-xs font-medium uppercase rounded-full bg-stone-300/50 dark:bg-stone-700 text-black dark:text-white"
+          class="inline-flex p-1 md:px-6 md:py-3 text-xs font-medium uppercase rounded-full hover:bg-stone-300/50 dark:bg-stone-800 text-black dark:text-white"
         >
-          Insights
+          <span class="hidden md:block">insights</span>
+          <span class="md:hidden material-symbols-outlined leading-none text-4xl">visibility</span>
         </a>
 
         <!-- CTA Button -->
         <a
           href="items.html"
-          class="px-6 py-3 text-xs font-semibold uppercase rounded-full bg-black text-white hover:opacity-80 transition group text-rotate"
+          class=" inline-flex p-1 md:px-6 md:py-3 text-xs font-semibold uppercase rounded-full bg-black text-white hover:opacity-80 transition group text-rotate"
         >
-          <span class="relative overflow-hidden block text-span">
-            <span class="block relative">Store</span>
-            <span class="block absolute">Store</span>
+          <span class="relative overflow-hidden md:block text-span leading-[100%]">
+            <span class="hidden md:block relative">Store</span>
+            <span class="hidden md:block absolute">Store</span>
+          <span class="md:hidden material-symbols-outlined leading-none text-4xl">store</span>
           </span>
         </a>
       </div>
-      <!-- Hamburger Button -->
-      <button
-        id="hamburger-btn"
-        class="hamburger text-stone-900 dark:text-stone-50 flex md:hidden items-center gap-2 bg-stone-200/80 dark:bg-stone-900/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-lg"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
 
-    <!-- Mobile Menu Panel -->
-    <div
-      id="mobile-menu"
-      class="mobile-menu bg-stone-200/80 dark:bg-stone-900/80 text-stone-900 dark:text-stone-50"
-    >
-      <a
-        href="index.html"
-        class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800"
-        >Home</a
-      >
-      <a
-        href="#"
-        class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800"
-        >About us</a
-      >
-      <a
-        href="#"
-        class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800"
-        >FAQs</a
-      >
-      <a
-        href="#"
-        class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800"
-        >Insights</a
-      >
-      <a
-        href="items.html"
-        class="font-['Epilogue'] tracking-tight text-base uppercase hover:bg-stone-300/50 dark:hover:bg-stone-800"
-        >Store</a
-      >
-    </div>
     <!-- Hero Section -->
     <section
       class="h-screen w-full relative flex items-center justify-center overflow-hidden bg-surface-container"

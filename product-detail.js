@@ -105,6 +105,9 @@ addToCartBtn.addEventListener('click', () => {
   // Save to localStorage
   localStorage.setItem('cart', JSON.stringify(cartItems));
 
+  // Update cart badge
+  updateCartBadge();
+
   // Show toast notification
   showToast();
 
@@ -305,3 +308,258 @@ function updateCartCount() {
 }
 
 updateCartCount();
+
+// ===== CART CANVAS & CHECKOUT FUNCTIONALITY =====
+
+// Cart Canvas Elements
+const cartCanvas = document.getElementById('cart-canvas');
+const cartToggle = document.getElementById('cart-toggle');
+const closeCartBtn = document.getElementById('close-cart');
+const cartOverlay = document.getElementById('cart-overlay');
+const cartItemsContainer = document.getElementById('cart-items-container');
+const cartTotalEl = document.getElementById('cart-total');
+const checkoutBtn = document.getElementById('checkout-btn');
+const cartBadge = document.getElementById('cart-badge');
+
+// Checkout Modal Elements
+const checkoutModal = document.getElementById('checkout-modal');
+const checkoutContent = document.getElementById('checkout-content');
+const closeModalBtn = document.getElementById('close-modal');
+const checkoutForm = document.getElementById('checkout-form');
+
+// Update cart badge with item count
+function updateCartBadge() {
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  cartBadge.textContent = totalItems;
+  
+  if (totalItems > 0) {
+    cartBadge.classList.remove('hidden');
+  } else {
+    cartBadge.classList.add('hidden');
+  }
+}
+
+// Initialize badge on page load
+updateCartBadge();
+
+// Toggle cart canvas
+function toggleCartCanvas() {
+  const isOpen = cartCanvas.classList.contains('translate-x-0');
+  
+  if (isOpen) {
+    // Close cart
+    cartCanvas.classList.remove('translate-x-0');
+    cartOverlay.classList.remove('opacity-100');
+    cartOverlay.classList.add('invisible');
+  } else {
+    // Open cart
+    cartCanvas.classList.add('translate-x-0');
+    cartOverlay.classList.remove('invisible');
+    cartOverlay.classList.add('opacity-100');
+    renderCartItems();
+  }
+}
+
+// Close cart when clicking overlay
+cartOverlay.addEventListener('click', (e) => {
+  if (e.target === cartOverlay) {
+    toggleCartCanvas();
+  }
+});
+
+// Close cart button
+closeCartBtn.addEventListener('click', toggleCartCanvas);
+
+// Cart toggle button
+cartToggle.addEventListener('click', toggleCartCanvas);
+
+// Render cart items in the canvas
+function renderCartItems() {
+  cartItemsContainer.innerHTML = '';
+  
+  if (cartItems.length === 0) {
+    cartItemsContainer.innerHTML = '<p class="text-center text-on-surface-variant py-8">Your cart is empty</p>';
+    cartTotalEl.textContent = '$0';
+    return;
+  }
+
+  let total = 0;
+
+  cartItems.forEach((item, index) => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+
+    const cartItemEl = document.createElement('div');
+    cartItemEl.className = 'bg-surface-container rounded-lg p-4 flex gap-4 border border-outline-variant/20';
+    cartItemEl.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" class="w-24 h-24 object-cover rounded-lg">
+      <div class="flex-1">
+        <h4 class="font-bold text-sm line-clamp-2">${item.name}</h4>
+        <p class="text-xs text-on-surface-variant mb-2">Qty: ${item.quantity}</p>
+        <p class="font-semibold text-sm">$${itemTotal}</p>
+        <button class="mt-2 text-error text-xs font-semibold flex items-center gap-1 hover:opacity-70 transition remove-item-btn" data-index="${index}">
+          <span class="material-symbols-outlined" style="font-size: 16px;">delete</span>
+          Remove
+        </button>
+      </div>
+    `;
+    cartItemsContainer.appendChild(cartItemEl);
+  });
+
+  // Update total
+  cartTotalEl.textContent = `$${total.toFixed(2)}`;
+
+  // Add event listeners to remove buttons
+  document.querySelectorAll('.remove-item-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const index = e.currentTarget.getAttribute('data-index');
+      removeFromCart(parseInt(index));
+    });
+  });
+}
+
+// Remove item from cart
+function removeFromCart(index) {
+  cartItems.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+  renderCartItems();
+
+  // Update cart badge
+  updateCartBadge();
+
+  // Show toast
+  const toast = document.getElementById('cart-toast');
+  toast.style.opacity = '1';
+  setTimeout(() => {
+    toast.style.opacity = '0';
+  }, 1500);
+}
+
+// Checkout Modal Functions
+function openCheckoutModal() {
+  checkoutModal.classList.remove('opacity-0', 'invisible');
+  checkoutModal.classList.add('opacity-100');
+  checkoutContent.classList.remove('scale-95');
+  checkoutContent.classList.add('scale-100');
+  checkoutModal.style.pointerEvents = 'auto';
+  
+  // Populate order summary
+  const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const shipping = total > 100 ? 0 : 15;
+  
+  document.getElementById('modal-subtotal').textContent = `$${total.toFixed(2)}`;
+  document.getElementById('modal-shipping').textContent = shipping === 0 ? 'FREE' : `$${shipping}`;
+  document.getElementById('modal-total').textContent = `$${(total + shipping).toFixed(2)}`;
+}
+
+function closeCheckoutModal() {
+  checkoutModal.classList.add('opacity-0', 'invisible');
+  checkoutContent.classList.add('scale-95');
+  checkoutContent.classList.remove('scale-100');
+  checkoutModal.style.pointerEvents = 'none';
+}
+
+// Empty Cart Modal Elements
+const emptyCartModal = document.getElementById('empty-cart-modal');
+const emptyCartContent = document.getElementById('empty-cart-content');
+const closeEmptyModalBtn = document.getElementById('close-empty-modal');
+
+// Open empty cart modal
+function openEmptyCartModal() {
+  emptyCartModal.classList.remove('opacity-0', 'invisible');
+  emptyCartModal.classList.add('opacity-100');
+  emptyCartContent.classList.remove('scale-95');
+  emptyCartContent.classList.add('scale-100');
+  emptyCartModal.style.pointerEvents = 'auto';
+}
+
+// Close empty cart modal
+function closeEmptyCartModal() {
+  emptyCartModal.classList.add('opacity-0', 'invisible');
+  emptyCartContent.classList.add('scale-95');
+  emptyCartContent.classList.remove('scale-100');
+  emptyCartModal.style.pointerEvents = 'none';
+}
+
+// Close button for empty cart modal
+closeEmptyModalBtn.addEventListener('click', closeEmptyCartModal);
+
+// Close empty cart modal when clicking outside
+emptyCartModal.addEventListener('click', (e) => {
+  if (e.target === emptyCartModal) {
+    closeEmptyCartModal();
+  }
+});
+
+// Checkout button click
+checkoutBtn.addEventListener('click', () => {
+  if (cartItems.length === 0) {
+    openEmptyCartModal();
+    return;
+  }
+  openCheckoutModal();
+});
+
+// Close modal button
+closeModalBtn.addEventListener('click', closeCheckoutModal);
+
+// Close modal when clicking outside (on the modal)
+checkoutModal.addEventListener('click', (e) => {
+  if (e.target === checkoutModal) {
+    closeCheckoutModal();
+  }
+});
+
+// Handle checkout form submission
+checkoutForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('checkout-name').value;
+  const address = document.getElementById('checkout-address').value;
+  const pincode = document.getElementById('checkout-pincode').value;
+
+  if (!name || !address || !pincode) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  // Create order object
+  const order = {
+    id: Date.now(),
+    name: name,
+    address: address,
+    pincode: pincode,
+    items: cartItems,
+    total: cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+    orderDate: new Date().toLocaleString()
+  };
+
+  // Save order to localStorage
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+  orders.push(order);
+  localStorage.setItem('orders', JSON.stringify(orders));
+
+  // Clear cart
+  cartItems = [];
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+
+  // Close modal
+  closeCheckoutModal();
+
+  // Close cart canvas
+  cartCanvas.classList.remove('translate-x-0');
+  cartOverlay.classList.remove('opacity-100');
+  cartOverlay.classList.add('invisible');
+
+  // Reset form
+  checkoutForm.reset();
+
+  // Update cart badge
+  updateCartBadge();
+
+  // Show success message
+  alert(`Order placed successfully!\nOrder ID: ${order.id}\n\nThank you for your purchase!`);
+
+  // Optionally redirect or update UI
+  renderCartItems();
+});
